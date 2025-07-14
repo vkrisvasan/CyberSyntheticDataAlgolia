@@ -1,0 +1,5 @@
+algoliasearch
+fastapi
+uvicorn
+faker
+python-dotenv
