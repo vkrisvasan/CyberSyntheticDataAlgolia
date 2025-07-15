@@ -21,6 +21,7 @@ R4. Cloud APIs (AWS, GCP)	Cloud Security	JSON	resource_id, event_type, user_acti
 R5. Threat Feeds (OSINT, CTI)	Threat Intel	STIX/TAXII, JSON	ioc_type, value, confidence, timestamp
 
 R6. CVE Databases (NVD, VulnDB)	Vulnerability Data	XML/JSON	cve_id, severity, affected_products
+
 6. for all 6 sources need to create real time synthetic data available via a  interface to be read and fed to algolia. share the detailed implementation step with code
 7. deploy this real-time synthetic cybersecurity data generator + Algolia indexer for free using Docker on a cloud platform
 8. from algoliasearch.search_client_async import SearchClientAsync ModuleNotFoundError: No module named 'algoliasearch.search_client_async'
