@@ -8,7 +8,7 @@ Started with prompting of chatgpt
 3. MCP is model context protocol
 4. how to store and index the following data in algolia
 
-A. Source	Type	Format	Sample Fields
+5. Source	Type	Format	Sample Fields
 
 R1. SIEM (e.g., Splunk)	Internal Logs	JSON/CEF	timestamp, source_ip, alert_type
 
