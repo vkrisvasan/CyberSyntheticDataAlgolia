@@ -6,7 +6,14 @@ Started with prompting of chatgpt
 1. what are the use cases with usage of real time search tool + real time data + LLM in cyber security space
 2. detail in 5 pages "Executive Dashboards & Real-Time Risk Reporting" use case including (a) design of the agentic system, (b) real time input sources with detailed format of the input sources (c) details on how to implement of data search / index tool (d) UI/ UX layer for execs with options to prompt in natural language (e) details on how to convert the execs prompts or inputs to data search / index tool by implementing a MCP
 3. MCP is model context protocol
-4. how to store and index the following data in algolia <img width="800" height="526" alt="image" src="https://github.com/user-attachments/assets/a9b98717-931a-45a2-b186-32f5c3244634" />
+4. how to store and index the following data in algolia Source	Type	Format	Sample Fields
+SIEM (e.g., Splunk)	Internal Logs	JSON/CEF	timestamp, source_ip, alert_type
+EDR (e.g., CrowdStrike)	Endpoint Events	JSON	device_id, process_name, file_hash
+NDR (e.g., Darktrace)	Network Logs	JSON/PCAP	src_ip, dst_ip, protocol, risk_score
+Cloud APIs (AWS, GCP)	Cloud Security	JSON	resource_id, event_type, user_activity
+Threat Feeds (OSINT, CTI)	Threat Intel	STIX/TAXII, JSON	ioc_type, value, confidence, timestamp
+CVE Databases (NVD, VulnDB)	Vulnerability Data	XML/JSON	cve_id, severity, affected_products<img width="398" height="254" alt="image" src="https://github.com/user-attachments/assets/f7ed2a16-0f2e-47f3-9d75-fcfb976f82bf" />
+
 5. for all 6 sources need to create real time synthetic data available via a  interface to be read and fed to algolia. share the detailed implementation step with code
 6. deploy this real-time synthetic cybersecurity data generator + Algolia indexer for free using Docker on a cloud platform
 7. from algoliasearch.search_client_async import SearchClientAsync ModuleNotFoundError: No module named 'algoliasearch.search_client_async'
